@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Helvetica, sans-serif;
+  background-color: #f3f3f3;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  position: absolute;
+  padding: 0px 30px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+header .row {
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .brand-logo a {
+  line-height: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 600;
+  color: #e9e9e8;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+header .navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* animation: transition-in 1.5s forwards;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: transition-in; */
+}
+
+/* @keyframes transition-in{
+  from{transform: translate(0px, 1000px)  }
+  to{transform: translate(0px,0px)}
+} */
+
+header .navbar ul li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+header .navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #e9e9e8;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+header .navbar ul li a::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  background-color: #3aaf0c;
+  width: 0%;
+  right: 0;
+  top: 20px;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+}
+
+header .navbar ul li a:hover::before {
+  width: 100%;
+  right: 0;
+}
+
+header .navbar ul li a.active:before {
+  width: 100%;
+  right: 0;
+}
+
+.home {
+  /* background: url(image/baner.jpg);
+  background-size: cover; */
+  background: #272725;
+  min-height: 100vh;
+  /* background-position: center; */
+}
+
+.home .full-screen {
+  min-height: 100vh;
+}
+
+.home .home-content {
+  position: relative;
+  display: flex;
+  flex: 0 0 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .home-content .block {
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  margin: 50px;
+  padding: 25px;
+}
+
+.home .home-content .block .kata {
+  padding: 10px 30px;
+  margin: 10px auto;
+}
+
+.home .home-content .block .kata span {
+  color: #2ec442;
+  font-family: "Lemonada", cursive;
+}
+
+.home .home-content .block .kata h1 {
+  color: #e9e9e8;
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+.home .home-content .block .kata p {
+  color: #e9e9e8;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.home .home-content .block .join-btn {
+  margin-top: 40px;
+}
+
+.home .home-content .block .join-btn a {
+  display: inline-block;
+  background-color: transparent;
+  padding: 15px 40px;
+  min-width: 221px;
+  color: #e9e9e8;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  transition: all 0.8s ease-in-out;
+}
+
+.home .home-content .block .join-btn a:hover {
+  background-color: #3aaf0c;
+  color: #f3f3f3;
+  box-shadow: 5px 1px 25px 1px #575757;
+}
+
+.about {
+  margin: 100px 50px;
+}
+
+.about .container {
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.about .row .img {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+.about .row .img img {
+  width: 100%;
+}
+
+.about .row .kata {
+  flex: 0 0 66.66%;
+  max-width: 66.66%;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.about .row .kata h4 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 1.1px;
+}
+
+.about .row .kata p {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.about .row .kata .tombol {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  position: absolute;
+  user-select: none;
+  cursor: pointer;
+  bottom: 10%;
+  right: 10%;
+}
+
+.about .row .kata .tombol a {
+  text-decoration: none;
+}
+
+.about .row .kata .tombol .cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.about .row .kata .tombol .cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: rgba(160, 255, 137, 0.4);
+  width: 56px;
+  height: 56px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.about .row .kata .tombol .cta span {
+  position: relative;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  vertical-align: middle;
+}
+
+.about .row .kata .tombol .cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #272725;
+  stroke-width: 2;
+  -webkit-transform: translateX(-5px);
+  transform: translateX(-5px);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.about .row .kata .tombol .cta:hover::before {
+  width: 100%;
+  background: rgb(160, 255, 137);
+}
+
+.about .row .kata .tombol .cta:hover svg {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.about .row .kata .tombol .cta:active {
+  -webkit-transform: scale(0.96);
+  transform: scale(0.96);
+}
+
+.product {
+background: url(../img/background.jpg);
+  background-size: cover;
+  padding: 100px 20px;
+}
+
+.title {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.title h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 38px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #e9e9e8;
+  margin: 0 0 10px;
+  letter-spacing: 3px;
+}
+
+/* .title h1::before{
+  position: absolute;
+  content: '';
+  background-color: #3aaf0c;
+  left: 20%;
+  right: 20%;
+  height: 4px;
+  bottom: 0;
+} */
+
+.text_center {
+  text-align: center !important;
+}
+
+.product .container .row .box {
+  width: 300px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: #eee;
+  overflow: hidden;
+  margin: 25px;
+}
+
+.product .container .row .box .slide-image {
+  height: 400px;
+  position: relative;
+}
+
+.product .container .row .box .slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 25%;
+}
+
+.product .container .row .box .slide-image .overlay {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.product .container .row .box .slide-image .overlay .buy_btn {
+  text-decoration: none;
+  display: flex;
+  width: 120px;
+  height: 40px;
+  font-weight: 700;
+  font-family: calibri;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #272725;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+}
+
+.product .container .row .box .slide-image .overlay .buy_btn:hover {
+  color: #e9e9e8;
+  background-color: #20ca36;
+  transition: all 0.5s ease;
+}
+
+.product .container .row .box .slide-image:hover .overlay {
+  visibility: visible;
+  animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.product .container .row .box .detail-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: sans-serif;
+}
+
+.product .container .row .box .detail-box a {
+  text-decoration: none;
+  color: #272725;
+  margin: 5px 0;
+  font-weight: 580;
+  font-family: "Poppins", Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  padding-right: 8px;
+}
+
+.product .container .row .box .detail-box .price {
+  color: #333333;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Poppins", Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+}
