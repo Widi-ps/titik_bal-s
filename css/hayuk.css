@@ -301,9 +301,10 @@ header .navbar ul li a.active:before {
 }
 
 .product {
-background: url(../img/background.jpg);
+  background: url(../img/background.jpg);
   background-size: cover;
   padding: 100px 20px;
+  margin: 100px 0;
 }
 
 .title {
@@ -343,7 +344,7 @@ background: url(../img/background.jpg);
   border-radius: 10px;
   background-color: #eee;
   overflow: hidden;
-  margin: 25px;
+  margin: 20px;
 }
 
 .product .container .row .box .slide-image {
@@ -433,4 +434,22 @@ background: url(../img/background.jpg);
   font-size: 15px;
   font-family: "Poppins", Helvetica, sans-serif;
   letter-spacing: 0.5px;
+}
+
+.testimonial {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  /* min-height: 50vh; */
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.testimonial .testimonial-image {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.testimonial .testimonial-image img {
+  width: 100%;
 }
