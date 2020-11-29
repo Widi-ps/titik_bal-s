@@ -212,16 +212,17 @@ header .navbar ul li a.active:before {
 }
 
 .about .row .kata h4 {
-  font-size: 23px;
+  font-size: 30px;
   font-weight: 600;
   margin-bottom: 15px;
   letter-spacing: 1.1px;
 }
 
 .about .row .kata p {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 1px;
+  color: #333333;
 }
 
 .about .row .kata .tombol {
@@ -456,4 +457,55 @@ header .navbar ul li a.active:before {
   max-width: 70%;
   align-items: center;
   justify-content: center;
+}
+
+.testimonials .row{
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials .row .slider{
+  display: block;
+  height: 100%;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonials .row .slider .slide{
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonials .row .slider .slide .slide-text{
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.testimonials .row .slider .slide .slide-img{
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.testimonials .row .slider .slide .slide-img img{
+  width: 100%;
+  /* height: 100%; */
+}
+
+.testimonials .row .slider .slide-2{
+  display: none;
 }
