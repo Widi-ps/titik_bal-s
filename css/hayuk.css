@@ -30,7 +30,7 @@ nav{
   align-items: center;
   justify-content: space-around;
   min-height: 10vh;
-  background: #f3f3f3;
+  /* background-color: #f3f3f3; */
 }
 
 .logo{
@@ -42,39 +42,64 @@ nav{
 
 .nav-links{
   display: flex;
-  list-style: none;
-  width: 35%;
+  width: 42%; 
   justify-content: space-around;
   height: 100%;
+  align-items: center;
 }
-
-.nav-links li a{
-  color: #000000;
+.nav-links li{
+  list-style: none;
+}
+.nav-links a{
+  color: #272725;
   text-decoration: none;
+  letter-spacing: 3px;
   font-size: 16px;
+  font-weight: 500;
 }
-
-.burger{
-  display: none;
-}
-
 .burger div{
   width: 30px;
   height: 3px;
   background: rgb(53, 192, 60);
   margin: 5px;
 }
-
+.burger{
+  display: none;
+  cursor: pointer;
+}
+.landing .container{
+  display: flex;
+  justify-content: space-around;
+} 
 .landing{
   height: 90vh;
   display: flex;
+  
+}
+.image-page{
+  margin-left: 40px;
+  width: 40%;
+  height: 100%;
+}
+
+.image-page img{
+  width: 100%;
+}
+
+.text-landing{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
   justify-content: center;
-  align-items: center;
+}
+
+.text-landing span{
+  color: #06971a;
 }
 
 .landing h1{
-  margin: 100px;
   font-size: 50px;
+  font-weight: 700;
 }
 
 /* 
@@ -625,11 +650,10 @@ header .navbar ul li a.active:before {
   body{
     overflow-x: hidden;
   }
-
   .nav-links{
     position: absolute;
     right: 0;
-    height: 90vh;
+    height: 92vh;
     top: 8vh;
     background-color: #20ca36;
     display: flex;
@@ -637,16 +661,19 @@ header .navbar ul li a.active:before {
     align-items: center;
     width: 50%;
     transform: translateX(100%);
+    transition: transform .5s ease-in;
   }
-
   .nav-links li{
     opacity: 0;
   }
-
   .burger{
     display: block;
   }
-}
+
+  }
+  .nav-active{
+    transform: translateX(0%);
+  }
 
 @media screen and (min-width: 768px){
   .testimonials .slider .slide{
