@@ -25,7 +25,7 @@ body {
   flex-wrap: wrap;
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -33,71 +33,70 @@ nav{
   /* background-color: #f3f3f3; */
 }
 
-.logo{
+.logo {
   color: #272725;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
 }
 
-.nav-links{
+.nav-links {
   display: flex;
-  width: 42%; 
+  width: 42%;
   justify-content: space-around;
   height: 100%;
   align-items: center;
 }
-.nav-links li{
+.nav-links li {
   list-style: none;
 }
-.nav-links a{
+.nav-links a {
   color: #272725;
   text-decoration: none;
   letter-spacing: 3px;
   font-size: 16px;
   font-weight: 500;
 }
-.burger div{
+.burger div {
   width: 30px;
   height: 3px;
   background: rgb(53, 192, 60);
   margin: 5px;
 }
-.burger{
+.burger {
   display: none;
   cursor: pointer;
 }
-.landing .container{
+
+.landing {
+  height: 100vh;
   display: flex;
   justify-content: space-around;
-} 
-.landing{
-  height: 90vh;
-  display: flex;
-  
 }
-.image-page{
-  margin-left: 40px;
-  width: 40%;
+.image-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
   height: 100%;
 }
 
-.image-page img{
+.image-page img {
   width: 100%;
 }
 
-.text-landing{
+.text-landing {
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
 }
 
-.text-landing span{
+.text-landing span {
   color: #06971a;
 }
 
-.landing h1{
+.landing h1 {
   font-size: 50px;
   font-weight: 700;
 }
@@ -140,7 +139,8 @@ header .brand-logo a {
     animation-fill-mode: forwards;
     animation-play-state: running;
     animation-name: transition-in; */
-/* } */ */
+/* } */
+*/
 
 /* @keyframes transition-in{
   from{transform: translate(0px, 1000px)  }
@@ -273,7 +273,7 @@ header .navbar ul li a.active:before {
   align-items: center;
 }
 
-.about .row{
+.about .row {
   margin: 100px 0;
 }
 
@@ -516,7 +516,7 @@ header .navbar ul li a.active:before {
   letter-spacing: 0.5px;
 }
 
-.testimonials{
+.testimonials {
   background-size: 100%;
   min-height: 100vh;
   width: 100%;
@@ -535,7 +535,7 @@ header .navbar ul li a.active:before {
   position: relative;
 }
 
-.testimonials  .slider .slide {
+.testimonials .slider .slide {
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
@@ -574,7 +574,7 @@ header .navbar ul li a.active:before {
   margin-top: 20px;
   color: hsl(240, 38%, 20%);
   font-weight: 600;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .testimonials .slider .slide .slide-text .author span {
@@ -588,7 +588,7 @@ header .navbar ul li a.active:before {
   height: 100%;
 }
 
-.testimonials  .slider .button{
+.testimonials .slider .button {
   position: absolute;
   left: 50%;
   top: 315px;
@@ -601,7 +601,8 @@ header .navbar ul li a.active:before {
   overflow: hidden;
 }
 
-.testimonials .slider .button .next,.testimonials .slider .button .prev{
+.testimonials .slider .button .next,
+.testimonials .slider .button .prev {
   display: inline-block;
   width: 50%;
   height: 100%;
@@ -609,22 +610,22 @@ header .navbar ul li a.active:before {
   cursor: pointer;
 }
 
-.testimonials .slider .button .prev{
+.testimonials .slider .button .prev {
   left: 0;
 }
 
-.testimonials .slider .button .next{
+.testimonials .slider .button .next {
   right: 0;
 }
 
 .testimonials .slider .button .prev:hover,
-.testimonials .slider .button .next:hover{
-  background-color: rgba(10, 255, 0, .1);
+.testimonials .slider .button .next:hover {
+  background-color: rgba(10, 255, 0, 0.1);
 }
 
 .testimonials .slider .button .next::after,
 .testimonials .slider .button .prev::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -632,28 +633,31 @@ header .navbar ul li a.active:before {
   background-size: auto;
 }
 
-.testimonials .slider .button .next::after{
+.testimonials .slider .button .next::after {
   background-image: url(../img/svg/icon-next.svg);
 }
 
-.testimonials .slider .button .prev::after{
+.testimonials .slider .button .prev::after {
   background-image: url(../img/svg/icon-prev.svg);
 }
 
-@media only screen and (max-width: 1024px){
-  .nav-links{
+@media only screen and (max-width: 1024px) {
+  .nav-links {
     width: 50%;
   }
 }
 
-@media screen and (max-width: 768px){
-  body{
-    overflow-x: hidden;
+@media screen and (max-width: 768px) {
+  .landing {
+    height: 80vh;
   }
-  .nav-links{
+  .text-landing h1 {
+    font-size: 30px;
+  }
+  .nav-links {
     position: absolute;
     right: 0;
-    height: 92vh;
+    height: 80vh;
     top: 8vh;
     background-color: #20ca36;
     display: flex;
@@ -661,45 +665,46 @@ header .navbar ul li a.active:before {
     align-items: center;
     width: 50%;
     transform: translateX(100%);
-    transition: transform .5s ease-in;
+    transition: transform 0.5s ease-in;
+    overflow-x: hidden;
   }
-  .nav-links li{
+  .nav-links li {
     opacity: 0;
   }
-  .burger{
+  .burger {
     display: block;
   }
-
+  .image-page {
+    display: none;
   }
-  .nav-active{
-    transform: translateX(0%);
-  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
 
-@media screen and (min-width: 768px){
-  .testimonials .slider .slide{
+@media screen and (min-width: 768px) {
+  .testimonials .slider .slide {
     flex-direction: row;
     text-align: left;
   }
-  .testimonials .slider .slide .slide-text{
+  .testimonials .slider .slide .slide-text {
     background-position: 10% top;
     background-size: 100px;
     align-items: flex-start;
   }
-  .testimonials .slider .slide .slide-img{
+  .testimonials .slider .slide .slide-img {
     margin-left: -100px;
     z-index: -1;
   }
-  .testimonials .slider .slide .slide-img img{
+  .testimonials .slider .slide .slide-img img {
     width: 400px;
   }
-  .testimonials .slider .button{
+  .testimonials .slider .button {
     top: 415px;
     transform: translate(0);
     left: calc(100% - 400px);
   }
 }
-
-
 
 .testimonials .slider .slide-2 {
   display: none;
