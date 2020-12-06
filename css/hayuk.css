@@ -57,6 +57,9 @@ nav {
   font-size: 16px;
   font-weight: 500;
 }
+.nav-active {
+  transform: translateX(0%);
+}
 .burger div {
   width: 30px;
   height: 3px;
@@ -67,7 +70,16 @@ nav {
   display: none;
   cursor: pointer;
 }
-
+@keyframes navLinksFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 .landing {
   height: 100vh;
   display: flex;
@@ -648,8 +660,11 @@ header .navbar ul li a.active:before {
 }
 
 @media screen and (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
   .landing {
-    height: 80vh;
+    height: 100vh;
   }
   .text-landing h1 {
     font-size: 30px;
@@ -657,7 +672,7 @@ header .navbar ul li a.active:before {
   .nav-links {
     position: absolute;
     right: 0;
-    height: 80vh;
+    height: 100vh;
     top: 8vh;
     background-color: #20ca36;
     display: flex;
@@ -666,7 +681,6 @@ header .navbar ul li a.active:before {
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    overflow-x: hidden;
   }
   .nav-links li {
     opacity: 0;
@@ -678,9 +692,7 @@ header .navbar ul li a.active:before {
     display: none;
   }
 }
-.nav-active {
-  transform: translateX(0%);
-}
+
 
 @media screen and (min-width: 768px) {
   .testimonials .slider .slide {
